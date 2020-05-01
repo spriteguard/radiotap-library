@@ -30,6 +30,7 @@
 /**
  * struct ieee82011_radiotap_header - base radiotap header
  */
+#pragma pack(push, 1)
 struct ieee80211_radiotap_header {
 	/**
 	 * @it_version: radiotap version, always 0
@@ -50,7 +51,8 @@ struct ieee80211_radiotap_header {
 	 * @it_present: (first) present word
 	 */
 	uint32_t it_present;
-} __packed;
+};
+#pragma pack(pop)
 
 /* version is always 0 */
 #define PKTHDR_RADIOTAP_VERSION	0
